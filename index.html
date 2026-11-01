@@ -1,4 +1,5 @@
 <title>Make a (S)Wish</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
@@ -73,6 +74,17 @@ h3{font-weight:500;font-size:24px;line-height:1.2;margin:0}
 .topnav button:focus-visible{outline:2px solid var(--info);outline-offset:2px}
 .topnav button[aria-current="true"]{box-shadow:inset 0 -2px 0 var(--info);font-weight:500}
 .page[hidden]{display:none}
+
+/* --- graphics tab: cards are drawn at 1080x1350 and shown scaled down --- */
+.gfx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:24px;margin-top:24px}
+.gfx{margin:0;min-width:0}
+.gfx img{display:block;width:100%;height:auto;aspect-ratio:4/5;background:var(--black-2)}
+.gfx figcaption{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin-top:12px;font-size:14px;font-weight:500}
+.gfx-st{flex:1 1 auto;min-width:0;font-size:12px;color:var(--mute)}
+.gfx button{font-family:inherit;font-size:14px;font-weight:600;line-height:1.5;cursor:pointer;margin-left:auto;
+  padding:8px 14px;border:0;border-radius:2px;background:var(--info);color:var(--on-info)}
+.gfx button:disabled{opacity:.5;cursor:default}
+.gfx button:focus-visible{outline:2px solid var(--info);outline-offset:2px}
 
 /* --- campaign hero --- */
 .board{background:var(--canvas);border-bottom:2px solid var(--info)}
@@ -408,7 +420,7 @@ footer p{max-width:78ch}
 }
 </style>
 
-<nav class='topnav'><div class='wrap'><span class='brand'>Make a <em>(S)</em>Wish</span><button type='button' data-pg='upcoming' aria-current='true'>Upcoming</button><button type='button' data-pg='summer2627' aria-current='false'>Summer &#8217;26/27</button><button type='button' data-pg='winter26' aria-current='false'>Winter &#8217;26</button><button type='button' data-pg='summer2526' aria-current='false'>Summer &#8217;25/26</button><button type='button' data-pg='winter25' aria-current='false'>Winter &#8217;25</button><button type='button' data-pg='alltime' aria-current='false'>All-time</button><button type='button' data-pg='records' aria-current='false'>Records</button><button type='button' data-pg='rivalries' aria-current='false'>Rivalries</button><button type='button' data-pg='compare' aria-current='false'>Compare</button><button type='button' data-pg='timeline' aria-current='false'>Timeline</button><button type='button' data-pg='hall' aria-current='false'>Hall of Fame</button><button type='button' data-pg='media' aria-current='false'>Media</button></div></nav>
+<nav class='topnav'><div class='wrap'><span class='brand'>Make a <em>(S)</em>Wish</span><button type='button' data-pg='upcoming' aria-current='true'>Upcoming</button><button type='button' data-pg='graphics' aria-current='false'>Graphics</button><button type='button' data-pg='summer2627' aria-current='false'>Summer &#8217;26/27</button><button type='button' data-pg='winter26' aria-current='false'>Winter &#8217;26</button><button type='button' data-pg='summer2526' aria-current='false'>Summer &#8217;25/26</button><button type='button' data-pg='winter25' aria-current='false'>Winter &#8217;25</button><button type='button' data-pg='alltime' aria-current='false'>All-time</button><button type='button' data-pg='records' aria-current='false'>Records</button><button type='button' data-pg='rivalries' aria-current='false'>Rivalries</button><button type='button' data-pg='compare' aria-current='false'>Compare</button><button type='button' data-pg='timeline' aria-current='false'>Timeline</button><button type='button' data-pg='hall' aria-current='false'>Hall of Fame</button><button type='button' data-pg='media' aria-current='false'>Media</button></div></nav>
 
 
 <div class="page" id="pg-upcoming">
@@ -425,7 +437,7 @@ footer p{max-width:78ch}
   <p class="lede">No version of the club has played Shonen Jump Girzzlies before, but they are no unknown: six seasons in this league, and 8th of 8 in F1 last winter. Here is what PlayHQ's records say about them and the players to watch.</p>
   <div class="pkpi">
     <div class="pk"><div class="k">Tip-off</div><div class="v" style="font-size:30px">7:10 PM</div>
-      <div class="n">In 12 days &#183; Wednesday 11 November</div></div>
+      <div class="n">In 9 days &#183; Wednesday 11 November</div></div>
     <div class="pk"><div class="k">Court</div><div class="v" style="font-size:24px;line-height:1.2">Eagle Stadium / Court 7</div>
       <div class="n">&nbsp;</div></div>
     
@@ -476,7 +488,7 @@ footer p{max-width:78ch}
   <div class="eyebrow">Still to come</div>
   <h2>Summer 2026/27 fixture</h2>
   <p class="lede">6 games have been confirmed so far. The rest of the regular season fills in here as the association sets it.</p>
-  <div class="fx"><div class='fxc'><div class='r'>ROUND 1 &#183; Wed 11 Nov &#183; in 12 days</div><div class='o'>Shonen Jump Girzzlies</div><div class='m'>7:10 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 2 &#183; Wed 18 Nov &#183; in 19 days</div><div class='o'>Lightning Men</div><div class='m'>10:10 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 3 &#183; Wed 25 Nov &#183; in 26 days</div><div class='o'>HOOPS Killers</div><div class='m'>8:40 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 4 &#183; Wed 2 Dec &#183; in 33 days</div><div class='o'>Dime Time</div><div class='m'>9:25 PM &#183; Eagle Stadium / Court 12</div></div><div class='fxc'><div class='r'>ROUND 5 &#183; Wed 9 Dec &#183; in 40 days</div><div class='o'>Wyners</div><div class='m'>9:25 PM &#183; Eagle Stadium / Court 12</div></div><div class='fxc'><div class='r'>ROUND 6 &#183; Wed 16 Dec &#183; in 47 days</div><div class='o'>SUGA</div><div class='m'>8:40 PM &#183; Eagle Stadium / Court 7</div></div></div>
+  <div class="fx"><div class='fxc'><div class='r'>ROUND 1 &#183; Wed 11 Nov &#183; in 9 days</div><div class='o'>Shonen Jump Girzzlies</div><div class='m'>7:10 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 2 &#183; Wed 18 Nov &#183; in 16 days</div><div class='o'>Lightning Men</div><div class='m'>10:10 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 3 &#183; Wed 25 Nov &#183; in 23 days</div><div class='o'>HOOPS Killers</div><div class='m'>8:40 PM &#183; Eagle Stadium / Court 7</div></div><div class='fxc'><div class='r'>ROUND 4 &#183; Wed 2 Dec &#183; in 30 days</div><div class='o'>Dime Time</div><div class='m'>9:25 PM &#183; Eagle Stadium / Court 12</div></div><div class='fxc'><div class='r'>ROUND 5 &#183; Wed 9 Dec &#183; in 37 days</div><div class='o'>Wyners</div><div class='m'>9:25 PM &#183; Eagle Stadium / Court 12</div></div><div class='fxc'><div class='r'>ROUND 6 &#183; Wed 16 Dec &#183; in 44 days</div><div class='o'>SUGA</div><div class='m'>8:40 PM &#183; Eagle Stadium / Court 7</div></div></div>
 </div></section>
 </main>
 </div>
@@ -1133,12 +1145,51 @@ footer p{max-width:78ch}
 </div></section></main>
 </div>
 
+<div class="page" id="pg-graphics" hidden>
+<header class="board"><div class="wrap board-in">
+  <div class="eyebrow">Make a (S)Wish &#183; Summer &#x27;26/27 &#183; 4 games so far</div>
+  <div class="crest"><h1>Graphics</h1></div>
+  <p class="sub">Ready for the group chat. Every card is made from the box score as soon as a game is logged,
+  so nobody has to pick a winner or type a number.</p>
+</div></header>
+<main>
+<section><div class="wrap">
+  <div class="cmp-pick">
+    <label class="cmp-f"><span>Season</span><select id="gfx-season"></select></label>
+    <label class="cmp-f"><span>Game</span><select id="gfx-game"></select></label>
+  </div>
+  <div class="gfx-grid" id="gfx-match"></div>
+</div></section>
+<section id="gfx-next-sec"><div class="wrap">
+  <h2>Next up</h2>
+  <div class="gfx-grid" id="gfx-next"></div>
+</div></section>
+<section id="gfx-awards-sec"><div class="wrap">
+  <h2 id="gfx-awards-h">Season awards</h2>
+  <p class="lede" id="gfx-awards-l"></p>
+  <div class="gfx-grid" id="gfx-awards"></div>
+</div></section>
+<section><div class="wrap">
+  <h2>How the winners are picked</h2>
+  <p class="lede">Player of the match goes to the highest Game Score on the night, a standard way of rolling a whole
+  box score into one number. It adds points, made shots, rebounds, assists, steals and blocks, and takes off missed
+  shots, turnovers and fouls, so a big night on the boards can beat a big night of scoring. Level scores go to whoever
+  scored more points.</p>
+  <p class="note">Game Score = points + 0.4 field goals made &#8722; 0.7 field goal attempts &#8722; 0.4 missed free throws
+  + 0.7 offensive rebounds + 0.3 defensive rebounds + steals + 0.7 assists + 0.7 blocks &#8722; 0.4 fouls &#8722; turnovers.
+  Season awards are per game, and a player needs half the season's box scores to qualify. Graphics start at Winter '26,
+  the first season with the full box scores this needs.</p>
+</div></section>
+</main>
+<script type="application/json" id="gfx-data">{"team":"Make a (S)Wish","seasons":[{"key":"summer2627","team":"Make a (S)Wish","label":"Summer 2026/27","short":"Summer '26/27","final":false,"n":4,"q":2,"span":"Summer '26/27, after 4 games","games":[{"id":"2026-10-07","label":"Grading round 1","date":"2026-10-07","dt":"Wed 7 Oct 2026","opp":"BCB","ven":"at","us":26,"them":52,"res":"L","note":"","leaders":[{"names":["Isaiah Graham"],"val":10,"label":"Points"},{"names":["Isaiah Graham"],"val":9,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":4,"label":"Assists"}],"potm":{"name":"Isaiah Graham","num":"4","gs":"9.4","tiles":[[10,"Points"],[9,"Rebounds"],[0,"Assists"],[1,"Steals"]],"why":"Team high in points, rebounds and steals"}},{"id":"2026-10-14","label":"Grading round 2","date":"2026-10-14","dt":"Wed 14 Oct 2026","opp":"The Gigglers","ven":"vs","us":52,"them":37,"res":"W","note":"","leaders":[{"names":["Fletcher Vesty"],"val":19,"label":"Points"},{"names":["Isaiah Graham"],"val":11,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":9,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"18.5","tiles":[[13,"Points"],[5,"Rebounds"],[9,"Assists"],[4,"Steals"]],"why":"Team high in assists and steals"}},{"id":"2026-10-21","label":"Grading round 3","date":"2026-10-21","dt":"Wed 21 Oct 2026","opp":"Lightning Men","ven":"at","us":39,"them":38,"res":"W","note":"Isaiah Graham hit the buzzer-beater to win it.","leaders":[{"names":["Isaiah Graham"],"val":15,"label":"Points"},{"names":["Isaiah Graham"],"val":14,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":4,"label":"Assists"}],"potm":{"name":"Isaiah Graham","num":"4","gs":"10.3","tiles":[[15,"Points"],[14,"Rebounds"],[2,"Assists"],["6/13","From the field"]],"why":"Team high in points and rebounds"}},{"id":"2026-10-28","label":"Grading round 4","date":"2026-10-28","dt":"Wed 28 Oct 2026","opp":"Basketbol","ven":"vs","us":36,"them":48,"res":"L","note":"","leaders":[{"names":["Ky Atkinson"],"val":13,"label":"Points"},{"names":["Vedant Patel"],"val":10,"label":"Rebounds"},{"names":["Isaiah Graham"],"val":4,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"8.5","tiles":[[13,"Points"],[9,"Rebounds"],[1,"Assists"],[1,"Steals"]],"why":"Team high in points and steals"}}],"awards":[{"title":"Most valuable","unit":"Game Score a game","names":["Ky Atkinson"],"val":"8.8"},{"title":"Top scorer","unit":"points a game","names":["Fletcher Vesty"],"val":"12.0"},{"title":"Glass cleaner","unit":"rebounds a game","names":["Isaiah Graham"],"val":"10.0"},{"title":"Floor general","unit":"assists a game","names":["Ky Atkinson"],"val":"4.5"},{"title":"Sharpshooter","unit":"threes a game","names":["Fletcher Vesty"],"val":"1.5"},{"title":"Lockdown","unit":"steals + blocks a game","names":["Vedant Patel"],"val":"1.8"},{"title":"Most player of the match","unit":"times","names":["Isaiah Graham","Ky Atkinson"],"val":"2"}],"mvp":{"name":"Ky Atkinson","num":"22","tiles":[["9.5","Points"],["6.2","Rebounds"],["4.5","Assists"],[4,"Games"]],"why":"8.8 Game Score a game, the best in the squad. Player of the match twice."}},{"key":"winter26","team":"Not-So-Shooting Stars","label":"Winter 2026","short":"Winter '26","final":true,"n":18,"q":9,"span":"Winter '26, final","games":[{"id":"2026-04-22","label":"Grading game 1","date":"2026-04-22","dt":"Wed 22 Apr 2026","opp":"Chenanigans","ven":"vs","us":34,"them":55,"res":"L","note":"","leaders":[{"names":["Isaiah Graham"],"val":13,"label":"Points"},{"names":["Dan Ibizi"],"val":8,"label":"Rebounds"},{"names":["Jaydn Vega"],"val":4,"label":"Assists"}],"potm":{"name":"Isaiah Graham","num":"4","gs":"10.7","tiles":[[13,"Points"],[4,"Rebounds"],[1,"Assists"],[1,"Steals"]],"why":"Team high in points and steals"}},{"id":"2026-04-29","label":"Grading game 2","date":"2026-04-29","dt":"Wed 29 Apr 2026","opp":"Fast and Loose","ven":"at","us":32,"them":43,"res":"L","note":"","leaders":[{"names":["Ky Atkinson"],"val":9,"label":"Points"},{"names":["Ky Atkinson"],"val":10,"label":"Rebounds"},{"names":["Hazem Azcoul"],"val":3,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"10.4","tiles":[[9,"Points"],[10,"Rebounds"],[2,"Assists"],[3,"Steals"]],"why":"Team high in points, rebounds and steals"}},{"id":"2026-05-06","label":"Grading game 3","date":"2026-05-06","dt":"Wed 6 May 2026","opp":"STRAW HATS","ven":"at","us":28,"them":53,"res":"L","note":"","leaders":[{"names":["Ky Atkinson"],"val":15,"label":"Points"},{"names":["Isaiah Graham"],"val":11,"label":"Rebounds"},{"names":["Isaiah Graham"],"val":4,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"11.9","tiles":[[15,"Points"],[6,"Rebounds"],[1,"Assists"],[1,"Steals"]],"why":"Team high in points"}},{"id":"2026-05-13","label":"Round 1","date":"2026-05-13","dt":"Wed 13 May 2026","opp":"Fast and Loose","ven":"vs","us":31,"them":36,"res":"L","note":"","leaders":[{"names":["Jaydn Vega","Ky Atkinson"],"val":9,"label":"Points"},{"names":["Dan Ibizi"],"val":11,"label":"Rebounds"},{"names":["Hazem Azcoul"],"val":4,"label":"Assists"}],"potm":{"name":"Hazem Azcoul","num":"10","gs":"4.7","tiles":[[5,"Points"],[3,"Rebounds"],[4,"Assists"],["2/6","From the field"]],"why":"Team high in assists"}},{"id":"2026-05-20","label":"Round 2","date":"2026-05-20","dt":"Wed 20 May 2026","opp":"50 Shades Of Klay","ven":"at","us":34,"them":43,"res":"L","note":"","leaders":[{"names":["Dan Ibizi"],"val":14,"label":"Points"},{"names":["Dan Ibizi"],"val":8,"label":"Rebounds"},{"names":["Dan Ibizi","Hazem Azcoul","Vivek Sumanam"],"val":2,"label":"Assists"}],"potm":{"name":"Dan Ibizi","num":"27","gs":"12.1","tiles":[[14,"Points"],[8,"Rebounds"],[2,"Assists"],[1,"Steals"]],"why":"Team high in points, rebounds and assists"}},{"id":"2026-05-27","label":"Round 3","date":"2026-05-27","dt":"Wed 27 May 2026","opp":"St Andrews Razors","ven":"vs","us":26,"them":25,"res":"W","note":"","leaders":[{"names":["Hazem Azcoul"],"val":8,"label":"Points"},{"names":["Isaiah Graham"],"val":10,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":3,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"6.9","tiles":[[6,"Points"],[7,"Rebounds"],[3,"Assists"],[2,"Steals"]],"why":"Team high in assists"}},{"id":"2026-06-10","label":"Round 5","date":"2026-06-10","dt":"Wed 10 Jun 2026","opp":"Goofy Gooners","ven":"at","us":48,"them":34,"res":"W","note":"","leaders":[{"names":["Isaiah Graham"],"val":12,"label":"Points"},{"names":["Dan Ibizi"],"val":13,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":4,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"10.8","tiles":[[11,"Points"],[2,"Rebounds"],[4,"Assists"],[3,"Steals"]],"why":"Team high in assists and steals"}},{"id":"2026-06-17","label":"Round 6","date":"2026-06-17","dt":"Wed 17 Jun 2026","opp":"Dad's Army","ven":"vs","us":44,"them":60,"res":"L","note":"","leaders":[{"names":["Jaydn Vega"],"val":18,"label":"Points"},{"names":["Isaiah Graham"],"val":7,"label":"Rebounds"},{"names":["Vivek Sumanam"],"val":6,"label":"Assists"}],"potm":{"name":"Jaydn Vega","num":"24","gs":"12.5","tiles":[[18,"Points"],[0,"Rebounds"],[2,"Assists"],["7/11","From the field"]],"why":"Team high in points"}},{"id":"2026-06-24","label":"Round 7","date":"2026-06-24","dt":"Wed 24 Jun 2026","opp":"Zero fox given","ven":"at","us":36,"them":38,"res":"L","note":"","leaders":[{"names":["Fletcher Vesty"],"val":11,"label":"Points"},{"names":["Vedant Patel"],"val":11,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":4,"label":"Assists"}],"potm":{"name":"Fletcher Vesty","num":null,"gs":"9.7","tiles":[[11,"Points"],[6,"Rebounds"],[1,"Assists"],[2,"Blocks"]],"why":"Team high in points, steals and blocks"}},{"id":"2026-07-01","label":"Round 8","date":"2026-07-01","dt":"Wed 1 Jul 2026","opp":"STRAW HATS","ven":"vs","us":46,"them":50,"res":"L","note":"","leaders":[{"names":["Fletcher Vesty"],"val":15,"label":"Points"},{"names":["Ky Atkinson"],"val":12,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":6,"label":"Assists"}],"potm":{"name":"Dan Ibizi","num":"27","gs":"8.3","tiles":[[14,"Points"],[10,"Rebounds"],[0,"Assists"],["6/15","From the field"]],"why":"Best all-round line on the night"}},{"id":"2026-07-15","label":"Round 10","date":"2026-07-15","dt":"Wed 15 Jul 2026","opp":"St Andrews Razors","ven":"vs","us":44,"them":51,"res":"L","note":"","leaders":[{"names":["Fletcher Vesty"],"val":12,"label":"Points"},{"names":["Vedant Patel"],"val":9,"label":"Rebounds"},{"names":["Hazem Azcoul"],"val":5,"label":"Assists"}],"potm":{"name":"Dan Ibizi","num":"27","gs":"7.6","tiles":[[8,"Points"],[8,"Rebounds"],[1,"Assists"],[3,"Steals"]],"why":"Team high in steals and blocks"}},{"id":"2026-07-22","label":"Round 11","date":"2026-07-22","dt":"Wed 22 Jul 2026","opp":"Goofy Gooners","ven":"at","us":23,"them":33,"res":"L","note":"","leaders":[{"names":["Ky Atkinson"],"val":8,"label":"Points"},{"names":["Ky Atkinson"],"val":9,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":4,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"5.6","tiles":[[8,"Points"],[9,"Rebounds"],[4,"Assists"],[1,"Steals"]],"why":"Team high in points, rebounds and assists"}},{"id":"2026-07-29","label":"Round 12","date":"2026-07-29","dt":"Wed 29 Jul 2026","opp":"Dad's Army","ven":"vs","us":49,"them":45,"res":"W","note":"","leaders":[{"names":["Jaydn Vega"],"val":18,"label":"Points"},{"names":["Dan Ibizi"],"val":11,"label":"Rebounds"},{"names":["Isaiah Graham"],"val":7,"label":"Assists"}],"potm":{"name":"Jaydn Vega","num":"24","gs":"10.0","tiles":[[18,"Points"],[4,"Rebounds"],[0,"Assists"],[1,"Steals"]],"why":"Team high in points and steals"}},{"id":"2026-08-05","label":"Round 13","date":"2026-08-05","dt":"Wed 5 Aug 2026","opp":"Fast and Loose","ven":"at","us":44,"them":47,"res":"L","note":"","leaders":[{"names":["Dan Ibizi","Isaiah Graham"],"val":10,"label":"Points"},{"names":["Dan Ibizi"],"val":11,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":7,"label":"Assists"}],"potm":{"name":"Vivek Sumanam","num":null,"gs":"10.6","tiles":[[9,"Points"],[3,"Rebounds"],[1,"Assists"],[3,"Steals"]],"why":"Best all-round line on the night"}},{"id":"2026-08-12","label":"Round 14","date":"2026-08-12","dt":"Wed 12 Aug 2026","opp":"Zero fox given","ven":"vs","us":19,"them":66,"res":"L","note":"","leaders":[{"names":["Ky Atkinson"],"val":8,"label":"Points"},{"names":["Vedant Patel"],"val":7,"label":"Rebounds"},{"names":["Dan Ibizi","Ky Atkinson","Vedant Patel","Vivek Sumanam"],"val":1,"label":"Assists"}],"potm":{"name":"Ky Atkinson","num":"22","gs":"6.3","tiles":[[8,"Points"],[5,"Rebounds"],[1,"Assists"],[2,"Steals"]],"why":"Team high in points and assists"}},{"id":"2026-08-19","label":"Round 15","date":"2026-08-19","dt":"Wed 19 Aug 2026","opp":"STRAW HATS","ven":"vs","us":30,"them":46,"res":"L","note":"","leaders":[{"names":["Aleu"],"val":13,"label":"Points"},{"names":["Aleu","Jaydn Vega","Ky Atkinson","Vedant Patel"],"val":3,"label":"Rebounds"},{"names":["Jaydn Vega","Ky Atkinson"],"val":2,"label":"Assists"}],"potm":{"name":"Aleu","num":null,"gs":"5.0","tiles":[[13,"Points"],[3,"Rebounds"],[0,"Assists"],["6/13","From the field"]],"why":"Team high in points and rebounds"}},{"id":"2026-08-26","label":"Round 16","date":"2026-08-26","dt":"Wed 26 Aug 2026","opp":"Noah Cant Swin","ven":"at","us":22,"them":54,"res":"L","note":"","leaders":[{"names":["Isaiah Graham"],"val":6,"label":"Points"},{"names":["Dan Ibizi"],"val":2,"label":"Assists"}],"potm":{"name":"Isaiah Graham","num":"4","gs":"3.6","tiles":[[6,"Points"],[1,"Assists"],[1,"Steals"],["3/5","From the field"]],"why":"Team high in points and steals"}},{"id":"2026-09-09","label":"Round 18","date":"2026-09-09","dt":"Wed 9 Sep 2026","opp":"Goofy Gooners","ven":"vs","us":54,"them":54,"res":"D","note":"","leaders":[{"names":["Isaiah Graham"],"val":14,"label":"Points"},{"names":["Isaiah Graham","Ky Atkinson"],"val":8,"label":"Rebounds"},{"names":["Ky Atkinson"],"val":8,"label":"Assists"}],"potm":{"name":"Isaiah Graham","num":"4","gs":"15.2","tiles":[[14,"Points"],[8,"Rebounds"],[3,"Assists"],[2,"Blocks"]],"why":"Team high in points and rebounds"}}],"awards":[{"title":"Most valuable","unit":"Game Score a game","names":["Ky Atkinson"],"val":"6.7"},{"title":"Top scorer","unit":"points a game","names":["Ky Atkinson"],"val":"8.7"},{"title":"Glass cleaner","unit":"rebounds a game","names":["Dan Ibizi"],"val":"7.2"},{"title":"Floor general","unit":"assists a game","names":["Ky Atkinson"],"val":"3.1"},{"title":"Sharpshooter","unit":"threes a game","names":["Jaydn Vega"],"val":"1.4"},{"title":"Lockdown","unit":"steals + blocks a game","names":["Jaydn Vega"],"val":"1.5"},{"title":"Most player of the match","unit":"times","names":["Ky Atkinson"],"val":"6"}],"mvp":{"name":"Ky Atkinson","num":"22","tiles":[["8.7","Points"],["6.2","Rebounds"],["3.1","Assists"],[17,"Games"]],"why":"6.7 Game Score a game, the best in the squad. Player of the match 6 times."}}],"next":{"label":"Round 1","opp":"Shonen Jump Girzzlies","date":"2026-11-11","day":"Wed 11 Nov","time":"7:10 PM","court":"Court 7","last":null}}</script>
+</div>
+
 <footer><div class="wrap">
   <p><strong>Sources.</strong> Results, ladder and fixtures from the team's
   <a href="https://www.playhq.com/basketball-victoria/org/wyndham-basketball-association-inc/senior-domestic-winter-2026/teams/not-so-shooting-stars/0cca5357">PlayHQ page</a>.
   Player box scores from <a href="https://my.gloryleague.basketball/games">Glory League</a>, which tracks games from video.
   Where the two disagree on a team total, the PlayHQ scoresheet is shown as the result and Glory League's numbers are used for
-  individual stats. Current as at 30 October 2026, after Round 18.</p>
+  individual stats. Current as at 2 November 2026, after Round 18.</p>
 </div></footer>
 
 <script>
@@ -1232,4 +1283,309 @@ footer p{max-width:78ch}
     });
   });
 })();
+</script>
+<script>/* Draws the group chat cards. Nothing is decided here: every name and number comes from the JSON that
+   graphics.py builds and audit.py checks. Shared by the Graphics tab and export_graphics.py.
+   ASCII only: gen.py escapes the page to ASCII entities, which would corrupt a literal dash in a script. */
+(function(w){
+  'use strict';
+  var W=1080, H=1350, M=72;                    // 4:5, the shape that fills a phone in any chat app
+  var DASH='\u2013', DOT=' \u00b7 ';
+  var DISP='"Bebas Neue",Impact,"Arial Narrow",sans-serif', TEXT='Inter,"Helvetica Neue",Arial,sans-serif';
+
+  // A win takes over the whole card in pink, so it looks different in the chat before anyone reads it.
+  var DARK={bg:'#0a0a0a',fg:'#ffffff',sub:'#b4b4b4',acc:'#FF9EC7',tint:'rgba(255,158,199,.15)',line:'rgba(255,255,255,.22)',court:'rgba(255,255,255,.07)'};
+  var PINK={bg:'#FF9EC7',fg:'#0a0a0a',sub:'rgba(10,10,10,.72)',acc:'#0a0a0a',tint:'rgba(10,10,10,.09)',line:'rgba(10,10,10,.28)',court:'rgba(10,10,10,.08)'};
+
+  function font(c,fam,size,weight){ c.font=(weight||400)+' '+size+'px '+fam; }
+  function fit(c,t,fam,max,maxW,weight){
+    font(c,fam,max,weight);
+    var m=c.measureText(t).width, s=max;
+    if(m>maxW){ s=Math.floor(max*maxW/m); font(c,fam,s,weight); }
+    return s;
+  }
+  function wrap(c,t,maxW){
+    var out=[], line='';
+    t.split(' ').forEach(function(x){
+      var n=line?line+' '+x:x;
+      if(line && c.measureText(n).width>maxW){ out.push(line); line=x; } else line=n;
+    });
+    if(line) out.push(line);
+    return out;
+  }
+  function text(c,t,x,y,col,al){ c.textAlign=al||'left'; c.fillStyle=col; c.fillText(t,x,y); }
+
+  // A FIBA half court drawn to scale, baseline along the bottom of the card, 72px to the metre.
+  function court(c,p){
+    var m=72, cx=W/2, base=H, hoop=base-1.575*m;
+    c.save(); c.strokeStyle=p.court; c.lineWidth=5; c.beginPath();
+    c.rect(cx-2.45*m,base-5.8*m,4.9*m,5.8*m+10);
+    c.moveTo(cx+1.8*m,base-5.8*m); c.arc(cx,base-5.8*m,1.8*m,0,Math.PI*2);
+    var r=6.75*m, side=6.6*m, dy=Math.sqrt(r*r-side*side), a=Math.atan2(dy,side);
+    c.moveTo(cx-side,base+10); c.lineTo(cx-side,hoop-dy);
+    c.arc(cx,hoop,r,Math.PI+a,-a);
+    c.lineTo(cx+side,base+10);
+    c.moveTo(cx+1.25*m,hoop); c.arc(cx,hoop,1.25*m,0,Math.PI,true);
+    c.moveTo(cx-.9*m,base-1.2*m); c.lineTo(cx+.9*m,base-1.2*m);
+    c.moveTo(cx+.23*m,hoop); c.arc(cx,hoop,.23*m,0,Math.PI*2);
+    c.stroke(); c.restore();
+  }
+  function ground(c,p){ c.fillStyle=p.bg; c.fillRect(0,0,W,H); court(c,p); }
+
+  function wordmark(c,team,p){
+    var t=team.toUpperCase(), i=t.indexOf('(S)'), x=M, y=118;
+    font(c,DISP,60);
+    c.textAlign='left';
+    if(i<0){ c.fillStyle=p.fg; c.fillText(t,x,y); return; }   // past seasons keep the name they were played under
+    [[t.slice(0,i),p.fg],['(S)',p===DARK?p.acc:p.fg],[t.slice(i+3),p.fg]].forEach(function(s){
+      c.fillStyle=s[1]; c.fillText(s[0],x,y); x+=c.measureText(s[0]).width;
+    });
+  }
+  function head(c,team,p,right){
+    wordmark(c,team,p);
+    font(c,DISP,60); text(c,right.toUpperCase(),W-M,118,p.sub,'right');
+  }
+  function foot(c,p,l,r){
+    font(c,TEXT,30,600);
+    var rw=r?c.measureText(r).width+32:0;
+    if(r) text(c,r,W-M,H-54,p.sub,'right');
+    fit(c,l,TEXT,30,W-2*M-rw,600); text(c,l,M,H-54,p.sub);   // a long opponent shrinks, never collides
+  }
+  function who(names){
+    if(names.length===1) return names[0];
+    return names.map(function(n){ return n.split(' ')[0]; }).join(', ').replace(/, ([^,]*)$/,' & $1');
+  }
+  function resultWord(g){ return ({W:'Win',L:'Loss',D:'Draw'})[g.res]; }
+
+  function full(c,d){
+    var g=d.game, p=g.res==='W'?PINK:DARK;
+    ground(c,p); head(c,d.team,p,g.label);
+    var score=g.us+DASH+g.them, s=fit(c,score,DISP,520,W-2*M), base=184+.7*s;
+    text(c,score,M,base,p.fg);
+    var line=(resultWord(g)+' '+g.ven+' '+g.opp).toUpperCase();
+    fit(c,line,DISP,112,W-2*M);
+    base+=128; text(c,line,M,base,p.acc);
+    var y=base+44, rowH=g.note?122:142;
+    g.leaders.forEach(function(l){
+      c.fillStyle=p.line; c.fillRect(M,y,W-2*M,2);
+      font(c,TEXT,26,600); text(c,l.label.toUpperCase(),M,y+40,p.sub);
+      fit(c,who(l.names).toUpperCase(),DISP,76,W-2*M-170); text(c,who(l.names).toUpperCase(),M,y+rowH-14,p.fg);
+      font(c,DISP,112); text(c,String(l.val),W-M,y+rowH-12,p.fg,'right');
+      y+=rowH;
+    });
+    if(g.note){
+      font(c,TEXT,36,600);
+      wrap(c,g.note,W-2*M).slice(0,2).forEach(function(t,i){ text(c,t,M,y+58+i*48,p.fg); });
+    }
+    foot(c,p,g.dt,d.short);
+  }
+
+  function hero(c,d,o){
+    var p=o.pal;
+    ground(c,p); head(c,d.team,p,o.right);
+    // the singlet number sits behind the name, as big as it will go; no confirmed number means no number
+    c.save(); c.beginPath(); c.rect(0,0,W,818); c.clip();
+    var mark=o.num||(d.team.indexOf('(S)')>=0?'(S)':'');
+    font(c,DISP,o.num?1120:900); text(c,mark,W+10,o.num?930:820,p.tint,'right');
+    c.restore();
+    var title=o.title.toUpperCase();
+    fit(c,title,DISP,128,W-2*M); text(c,title,M,250,p.acc);
+    var parts=o.name.toUpperCase().split(' '), l1=parts[0], l2=parts.slice(1).join(' ');
+    var s=Math.min(fit(c,l1,DISP,250,W-2*M),l2?fit(c,l2,DISP,250,W-2*M):250);
+    font(c,DISP,s);
+    var y=l2?770:790;
+    if(l2){ text(c,l1,M,y-s*.84,p.fg); text(c,l2,M,y,p.fg); } else text(c,l1,M,y,p.fg);
+    var n=o.tiles.length, tw=(W-2*M)/n;
+    c.fillStyle=p.line; c.fillRect(M,818,W-2*M,2);
+    o.tiles.forEach(function(t,i){
+      var x=M+i*tw;
+      fit(c,String(t[0]),DISP,164,tw-20); text(c,String(t[0]),x,986,p.fg);
+      font(c,TEXT,26,600); text(c,t[1].toUpperCase(),x,1032,p.sub);
+    });
+    c.fillStyle=p.line; c.fillRect(M,1068,W-2*M,2);
+    font(c,TEXT,38,600);
+    wrap(c,o.why,W-2*M).slice(0,3).forEach(function(t,i){ text(c,t,M,1130+i*50,p.fg); });
+    foot(c,p,o.footL,o.footR);
+  }
+  function potm(c,d){
+    var g=d.game, m=g.potm, why=m.why+'.';
+    if(g.note && g.note.indexOf(m.name)>=0) why=g.note;
+    hero(c,d,{pal:g.res==='W'?PINK:DARK,right:g.label,title:'Player of the match',name:m.name,num:m.num,tiles:m.tiles,
+      why:why,footL:resultWord(g)+' '+g.us+DASH+g.them+' '+g.ven+' '+g.opp,footR:'Game Score '+m.gs});
+  }
+  function mvp(c,d){
+    var s=d.season, m=s.mvp;
+    hero(c,d,{pal:DARK,right:s.short,title:s.final?'Season MVP':'Season MVP so far',name:m.name,num:m.num,tiles:m.tiles,
+      why:m.why,footL:s.span,footR:'Per game'});
+  }
+  function awards(c,d){
+    var s=d.season, p=DARK;
+    ground(c,p); head(c,d.team,p,s.short);
+    fit(c,'SEASON AWARDS',DISP,150,W-2*M); text(c,'SEASON AWARDS',M,262,p.acc);
+    font(c,TEXT,30,600); text(c,s.final?'Final':'So far, after '+s.n+(s.n===1?' game':' games'),M,312,p.sub);
+    var y=344, rowH=Math.floor((H-104-y)/s.awards.length);
+    s.awards.forEach(function(a){
+      c.fillStyle=p.line; c.fillRect(M,y,W-2*M,2);
+      font(c,TEXT,24,600); text(c,a.title.toUpperCase(),M,y+38,p.sub);
+      var v=String(a.val); font(c,DISP,92);
+      var vw=c.measureText(v).width;
+      fit(c,who(a.names).toUpperCase(),DISP,76,W-2*M-Math.max(vw,300)-24); text(c,who(a.names).toUpperCase(),M,y+rowH-12,p.fg);
+      font(c,DISP,92); text(c,v,W-M,y+rowH-38,p.acc,'right');
+      font(c,TEXT,22,600); text(c,a.unit,W-M,y+rowH-8,p.sub,'right');
+      y+=rowH;
+    });
+    foot(c,p,'Per game, half the season to qualify','');
+  }
+  function next(c,d){
+    var n=d.next, p=DARK;
+    ground(c,p); head(c,d.team,p,n.label);
+    fit(c,'NEXT UP',DISP,128,W-2*M); text(c,'NEXT UP',M,250,p.acc);
+    var t=n.opp.toUpperCase(), s=250, lines;
+    // the biggest size at which the name fits its block, whole words only
+    for(;;){
+      font(c,DISP,s); lines=wrap(c,t,W-2*M);
+      if(s<=90 || (lines.length*s*.9<=540 && lines.every(function(x){return c.measureText(x).width<=W-2*M;}))) break;
+      s-=6;
+    }
+    var y=300+s*.72;
+    lines.forEach(function(x){ text(c,x,M,y,p.fg); y+=s*.9; });
+    y=860;
+    c.fillStyle=p.line; c.fillRect(M,y,W-2*M,2);
+    fit(c,n.day.toUpperCase(),DISP,176,W-2*M); text(c,n.day.toUpperCase(),M,y+168,p.fg);
+    var when=[n.time,n.court].filter(Boolean).join(DOT).toUpperCase();
+    fit(c,when,DISP,108,W-2*M); text(c,when,M,y+284,p.acc);
+    var last=n.last?('Last met '+n.last.dt+': '+({W:'won',L:'lost',D:'drew'})[n.last.res]+' '+n.last.us+DASH+n.last.them):'First time we have played them';
+    foot(c,p,last,'');
+  }
+
+  var DRAW={full:full,potm:potm,mvp:mvp,awards:awards,next:next};
+  function slug(t){ return String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+  function filename(d){
+    var base=slug(d.team)+'-';
+    if(d.kind==='next') return base+'next-up-'+slug(d.next.opp)+'.png';
+    if(d.game) return base+slug(d.game.label)+'-'+slug(d.game.opp)+'-'+(d.kind==='potm'?'player-of-the-match':'full-time')+'.png';
+    return base+slug(d.season.short)+'-'+(d.kind==='mvp'?'mvp':'awards')+'.png';
+  }
+  function alt(d){
+    var g=d.game;
+    if(d.kind==='full') return 'Full time: '+d.team+' '+g.us+'-'+g.them+' '+g.ven+' '+g.opp+', '+g.label+'.';
+    if(d.kind==='potm') return 'Player of the match: '+g.potm.name+', '+g.potm.tiles.map(function(t){return t[1].toLowerCase()+' '+t[0];}).join(', ')+'.';
+    if(d.kind==='mvp') return 'Season MVP: '+d.season.mvp.name+'. '+d.season.mvp.why;
+    if(d.kind==='next') return 'Next up: '+d.next.opp+', '+d.next.day+' '+d.next.time+'.';
+    return 'Season awards: '+d.season.awards.map(function(a){return a.title+', '+who(a.names);}).join('; ')+'.';
+  }
+  function render(d){
+    var cv=document.createElement('canvas'); cv.width=W; cv.height=H;
+    var c=cv.getContext('2d'); c.textBaseline='alphabetic';
+    DRAW[d.kind](c,d);
+    return cv;
+  }
+  function fontsReady(){
+    var want=['400 100px "Bebas Neue"','600 30px Inter'];
+    var all=Promise.all(want.map(function(f){ return document.fonts.load(f,'ABC 0123 '+DASH); })).catch(function(){});
+    return Promise.race([all,new Promise(function(r){ setTimeout(r,4000); })]);
+  }
+  function matchCards(data,s,g){
+    var out=[{kind:'full',team:s.team,short:s.short,game:g}];
+    if(g.potm) out.push({kind:'potm',team:s.team,short:s.short,game:g});
+    return out;
+  }
+  function seasonCards(data,s){
+    var out=[];
+    if(s.awards.length) out.push({kind:'awards',team:s.team,season:s});
+    if(s.mvp) out.push({kind:'mvp',team:s.team,season:s});
+    return out;
+  }
+  function nextCards(data){ return data.next?[{kind:'next',team:data.team,next:data.next}]:[]; }
+  function latestCards(data){
+    var s=data.seasons[0], g=s.games[s.games.length-1];
+    return (g?matchCards(data,s,g):[]).concat(nextCards(data),seasonCards(data,s));
+  }
+  function allCards(data){
+    var out=nextCards(data);
+    data.seasons.forEach(function(s){
+      s.games.forEach(function(g){ out=out.concat(matchCards(data,s,g)); });
+      out=out.concat(seasonCards(data,s));
+    });
+    return out;
+  }
+  w.GFX={render:render,fontsReady:fontsReady,filename:filename,latestCards:latestCards,allCards:allCards};
+
+  // ---- the Graphics tab ----
+  var pg=document.getElementById('pg-graphics'), src=document.getElementById('gfx-data');
+  if(!pg||!src) return;
+  var data=JSON.parse(src.textContent), urls=[], started=false, sSel=document.getElementById('gfx-season'), gSel=document.getElementById('gfx-game');
+
+  // Inside the artifact only the downloads capability can save a file; on GitHub Pages a phone gets its
+  // share sheet, which reaches the chat in one tap, and a computer gets a plain download.
+  function save(blob,name,st){
+    var host=w.claude&&w.claude.use;
+    if(host){
+      return w.claude.use('downloads').then(function(dl){
+        if(!dl){ st.textContent='Press and hold the image to save it.'; return; }
+        return dl.save({filename:name,data:blob}).then(function(){ st.textContent='Saved'; },function(e){
+          st.textContent=e&&e.code==='declined'?'':'Could not save. Press and hold the image instead.';
+        });
+      });
+    }
+    var file=new File([blob],name,{type:'image/png'});
+    if(w.matchMedia('(pointer:coarse)').matches && navigator.canShare && navigator.canShare({files:[file]})){
+      return navigator.share({files:[file]}).catch(function(){});
+    }
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); },5000);
+    st.textContent='Saved';
+    return Promise.resolve();
+  }
+  var LABEL={full:'Full time',potm:'Player of the match',mvp:'Season MVP',awards:'Season awards',next:'Next up'};
+  function fill(el,cards){
+    el.textContent='';
+    cards.forEach(function(d){
+      var f=document.createElement('figure'), img=document.createElement('img'), cap=document.createElement('figcaption');
+      var b=document.createElement('button'), st=document.createElement('span'), lbl=document.createElement('span');
+      f.className='gfx'; img.alt=alt(d); img.width=W; img.height=H;
+      lbl.textContent=LABEL[d.kind]; st.className='gfx-st'; st.setAttribute('role','status');
+      b.type='button'; b.textContent='Save image'; b.disabled=true;
+      cap.appendChild(lbl); cap.appendChild(st); cap.appendChild(b);
+      f.appendChild(img); f.appendChild(cap); el.appendChild(f);
+      render(d).toBlob(function(blob){
+        var u=URL.createObjectURL(blob); urls.push(u); img.src=u; b.disabled=false;
+        b.addEventListener('click',function(){ st.textContent=''; save(blob,filename(d),st); });
+      },'image/png');
+    });
+  }
+  function season(){ return data.seasons[sSel.selectedIndex]; }
+  function drawMatch(){
+    var s=season();
+    fill(document.getElementById('gfx-match'),matchCards(data,s,s.games[s.games.length-1-gSel.selectedIndex]));
+  }
+  function drawSeason(){
+    var s=season();
+    gSel.textContent='';
+    s.games.slice().reverse().forEach(function(g){
+      var o=document.createElement('option');
+      o.textContent=g.label+': '+g.ven+' '+g.opp+' '+g.us+'-'+g.them; gSel.appendChild(o);
+    });
+    document.getElementById('gfx-awards-h').textContent=(s.final?s.short+' awards':s.short+' awards so far');
+    document.getElementById('gfx-awards-l').textContent=s.final?'Final, across '+s.n+' games with a box score.':'These move with every game until the season ends.';
+    document.getElementById('gfx-awards-sec').hidden=!s.awards.length;
+    fill(document.getElementById('gfx-awards'),seasonCards(data,s));
+    drawMatch();
+  }
+  function start(){
+    if(started) return; started=true;
+    data.seasons.forEach(function(s){ var o=document.createElement('option'); o.textContent=s.label; sSel.appendChild(o); });
+    document.getElementById('gfx-next-sec').hidden=!data.next;
+    fontsReady().then(function(){
+      fill(document.getElementById('gfx-next'),nextCards(data));
+      drawSeason();
+    });
+    sSel.addEventListener('change',function(){ urls.splice(0).forEach(URL.revokeObjectURL); fill(document.getElementById('gfx-next'),nextCards(data)); drawSeason(); });
+    gSel.addEventListener('change',drawMatch);
+  }
+  // the cards are only drawn once someone opens the tab, so the landing page pays nothing for them
+  if(!pg.hidden) start();
+  new MutationObserver(function(){ if(!pg.hidden) start(); }).observe(pg,{attributes:true,attributeFilter:['hidden']});
+})(window);
 </script>
